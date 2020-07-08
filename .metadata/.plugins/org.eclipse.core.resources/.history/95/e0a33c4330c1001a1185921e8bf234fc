@@ -1,0 +1,7 @@
+
+
+#include './UdpTraceBasedApp'
+
+void UdpTraceBasedApp::processStart() {
+    EV << "START" << endl;
+}

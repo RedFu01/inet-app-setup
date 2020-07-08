@@ -1,0 +1,40 @@
+file 1134 1594224001                                            
+version 2
+run General-0-20200708-17:59:48-75954
+attr configname General
+attr datetime 20200708-17:59:48
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Network
+attr processid 75954
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.sender.numApps 1
+param *.sender.app[*].typename "\"UdpTraceBasedApp\""
+param *.sender.app[0].destAddresses "\"receiver\""
+param *.sender.app[0].localPort 60000
+param *.sender.app[0].destPort 1000
+param *.sender.app[0].messageLength 1000B
+param *.sender.app[0].startTime 1s
+param *.sender.app[0].sendInterval 1s
+param *.receiver.numApps 1
+param *.receiver.app[*].typename "\"UdpSink\""
+param *.receiver.app[*].localPort 1000
+
+vector 0 Network.sender.app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 1 Network.sender.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+0	1111 11 1 1 0 0 1 1000 1000 1000 1000000
+1	1122 11 4 4 0 0 1 1008 1008 1008 1016064
+

@@ -1,0 +1,9 @@
+
+
+#include "./UdpTraceBasedApp.h"
+
+using namespace inet;
+
+void UdpTraceBasedApp::processStart() {
+    EV << "START" << endl;
+}

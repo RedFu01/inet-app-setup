@@ -1,0 +1,5 @@
+[General]
+network=Network
+
+*.sender.numApps = 1
+*.apps[*].typename = "UdpBasicApp"

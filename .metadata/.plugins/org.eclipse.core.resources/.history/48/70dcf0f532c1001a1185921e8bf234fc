@@ -1,0 +1,16 @@
+[General]
+network=Network
+sim-time-limit  = 100s
+
+*.sender.numApps = 1
+*.sender.app[*].typename = "UdpTraceBasedApp"
+*.sender.app[0].destAddresses = "receiver"
+*.sender.app[0].localPort = 60000
+*.sender.app[0].destPort = 1000
+*.sender.app[0].messageLength = 1000B
+*.sender.app[0].startTime = 1s
+*.sender.app[0].sendInterval = 1s
+
+
+*.reciver.numApps = 1
+*.reciver.app[*].typename = "UdpSink"
